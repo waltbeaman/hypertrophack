@@ -34,24 +34,6 @@ namespace Hypertrophack.Controllers
             return View(await _context.CompletedExercises.ToListAsync());
         }
 
-        // GET: CompletedExercises/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.CompletedExercises == null)
-            {
-                return NotFound();
-            }
-
-            var completedExercise = await _context.CompletedExercises
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (completedExercise == null)
-            {
-                return NotFound();
-            }
-
-            return View(completedExercise);
-        }
-
         // GET: CompletedExercises/Create
         public async Task<IActionResult> Create()
         {
