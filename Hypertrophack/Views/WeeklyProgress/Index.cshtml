@@ -5,165 +5,202 @@
     ViewData["Title"] = "Weekly Progress";
 }
 
-<h1>Weekly Progress</h1>
+<style>
+    .container {
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .progress {
+        height: 25px;
+    }
+    .progress-bar {
+        color: black;
+    }
+</style>
 
-<table class="table text-light">
-    <thead>
-        <tr>
-            <th></th>
-            <th>
+<h1 class="text-center">Weekly Progress</h1>
+<br />
+<div class="container justify-content-center">
+    <div class="item">
+        <div class="card zoom" style="width: 22rem; background-color: #3d5d91;">
+            <div class="card-header">
                 @Html.DisplayNameFor(model => model.ChestSets)
-            </th>
-            <th>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.ChestPctMaint)%">
+                            MV: @(ViewBag.ChestPctMaint)%
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.ChestPctMin)%">
+                            MEV: @(ViewBag.ChestPctMin)%
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.ChestPctMax)%">
+                            MRV: @(ViewBag.ChestPctMax)%
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <div class="card" style="width: 22rem; background-color: #3d5d91;">
+            <div class="card-header">
                 @Html.DisplayNameFor(model => model.BackSets)
-            </th>
-            <th>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.BackPctMaint)%">
+                            MV: @(ViewBag.BackPctMaint)%
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.BackPctMin)%">
+                            MEV: @(ViewBag.BackPctMin)%
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.BackPctMax)%">
+                            MRV: @(ViewBag.BackPctMax)%
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <div class="card" style="width: 22rem; background-color: #3d5d91;">
+            <div class="card-header">
                 @Html.DisplayNameFor(model => model.LegSets)
-            </th>
-            <th>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.LegPctMaint)%">
+                             MV: @(ViewBag.LegPctMaint)%
+                         </div>
+                    </div>
+                </li>
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.LegPctMin)%">
+                            MEV: @(ViewBag.LegPctMin)%
+                         </div>
+                    </div>
+                </li>
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.LegPctMax)%">
+                            MRV: @(ViewBag.LegPctMax)%
+                         </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <div class="card" style="width: 22rem; background-color: #3d5d91;">
+            <div class="card-header">
                 @Html.DisplayNameFor(model => model.ArmSets)
-            </th>
-            <th>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.ArmPctMaint)%">
+                            MV: @(ViewBag.ArmPctMaint)%
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.ArmPctMin)%">
+                            MEV: @(ViewBag.ArmPctMin)%
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.ArmPctMax)%">
+                            MRV:@(ViewBag.ArmPctMax)%
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="item">
+        <div class="card" style="width: 22rem; background-color: #3d5d91;">
+            <div class="card-header">
                 @Html.DisplayNameFor(model => model.ShoulderSets)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- DATA -->
-        <tr>
-            <td style="text-align: right">Sets Complete</td>
-            <td>
-                @Html.DisplayFor(model => model.ChestSets)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.BackSets)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.LegSets)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.ArmSets)
-            </td>
-            <td>
-                @Html.DisplayFor(model => model.ShoulderSets)
-            </td>
-        </tr>
-        <!-- MAINT SETS PROGRESS -->
-        <tr>
-            <td style="text-align: right">Maintenance Progress</td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-warning" role="progressbar"
-                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                    style="width: @(ViewBag.ChestPctMaint)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-warning" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.BackPctMaint)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-warning" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.LegPctMaint)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-warning" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.ArmPctMaint)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-warning" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.ShoulderPctMaint)%"></div>
-                </div>
-            </td>
-        </tr>
-        <!-- MIN SETS PROGRESS -->
-        <tr>
-            <td style ="text-align: right">Min Effective Progress</td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-info" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.ChestPctMin)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-info" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.BackPctMin)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-info" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.LegPctMin)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-info" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.ArmPctMin)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-info" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.ShoulderPctMin)%"></div>
-                </div>
-            </td>
-        </tr>
-        <!-- MAX SETS PROGRESS -->
-        <tr>
-            <td style="text-align: right">Max Recoverable Progress</td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.ChestPctMax)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.BackPctMax)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.LegPctMax)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.ArmPctMax)%"></div>
-                </div>
-            </td>
-            <td>
-                <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar"
-                         aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                         style="width: @(ViewBag.ShoulderPctMax)%"></div>
-                </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.ShoulderPctMaint)%">
+                            MV: @(ViewBag.ShoulderPctMaint)%
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.ShoulderPctMin)%">
+                            MEV: @(ViewBag.ShoulderPctMin)%
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item bg-secondary">
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar"
+                             aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                             style="width: @(ViewBag.ShoulderPctMax)%">
+                            MRV: @(ViewBag.ShoulderPctMax)%
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

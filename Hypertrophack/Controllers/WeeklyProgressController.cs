@@ -40,24 +40,24 @@ namespace Hypertrophack.Controllers
             };
 
             // Calculate chest progress
-            ViewBag.ChestPctMaint = (weeklyProgress.ChestSets / 5m) * 100m;
-            ViewBag.ChestPctMin = (weeklyProgress.ChestSets / 6m) * 100m;
-            ViewBag.ChestPctMax = (weeklyProgress.ChestSets / 20m) * 100m;
+            ViewBag.ChestPctMaint = decimal.Round((weeklyProgress.ChestSets / 5m) * 100m);
+            ViewBag.ChestPctMin = decimal.Round((weeklyProgress.ChestSets / 6m) * 100m);
+            ViewBag.ChestPctMax = decimal.Round((weeklyProgress.ChestSets / 20m) * 100m);
 
             // Calculate back progress
-            ViewBag.BackPctMaint = (weeklyProgress.BackSets / 6m) * 100m;
-            ViewBag.BackPctMin = (weeklyProgress.BackSets / 10m) * 100m;
-            ViewBag.BackPctMax = (weeklyProgress.BackSets / 20m) * 100m;
+            ViewBag.BackPctMaint = decimal.Round((weeklyProgress.BackSets / 6m) * 100m);
+            ViewBag.BackPctMin = decimal.Round((weeklyProgress.BackSets / 10m) * 100m);
+            ViewBag.BackPctMax = decimal.Round((weeklyProgress.BackSets / 20m) * 100m);
 
             // Calculate leg progress
-            ViewBag.LegPctMaint = (weeklyProgress.LegSets / 6m) * 100m;
-            ViewBag.LegPctMin = (weeklyProgress.LegSets / 8m) * 100m;
-            ViewBag.LegPctMax = (weeklyProgress.LegSets / 25m) * 100m;
+            ViewBag.LegPctMaint = decimal.Round((weeklyProgress.LegSets / 6m) * 100m);
+            ViewBag.LegPctMin = decimal.Round((weeklyProgress.LegSets / 8m) * 100m);
+            ViewBag.LegPctMax = decimal.Round((weeklyProgress.LegSets / 25m) * 100m);
 
             // Calculate arm progress
-            ViewBag.ArmPctMaint = (weeklyProgress.ArmSets / 4m) * 100m;
-            ViewBag.ArmPctMin = (weeklyProgress.ArmSets / 8m) * 100m;
-            ViewBag.ArmPctMax = (weeklyProgress.ArmSets / 22m) * 100m;
+            ViewBag.ArmPctMaint = decimal.Round((weeklyProgress.ArmSets / 4m) * 100m);
+            ViewBag.ArmPctMin = decimal.Round((weeklyProgress.ArmSets / 8m) * 100m);
+            ViewBag.ArmPctMax = decimal.Round((weeklyProgress.ArmSets / 22m) * 100m);
 
             // Calculate shoulder progress
             if (weeklyProgress.ChestSets >= 5)
@@ -66,10 +66,10 @@ namespace Hypertrophack.Controllers
             }
             else
             {
-                ViewBag.ShoulderPctMaint = (weeklyProgress.ShoulderSets / 3m) * 100m;
+                ViewBag.ShoulderPctMaint = decimal.Round((weeklyProgress.ShoulderSets / 3m) * 100m);
             }
-            ViewBag.ShoulderPctMin = (weeklyProgress.ShoulderSets / 6m) * 100m;
-            ViewBag.ShoulderPctMax = (weeklyProgress.ShoulderSets / 16m) * 100m;
+            ViewBag.ShoulderPctMin = decimal.Round((weeklyProgress.ShoulderSets / 6m) * 100m);
+            ViewBag.ShoulderPctMax = decimal.Round((weeklyProgress.ShoulderSets / 16m) * 100m);
 
             return View(weeklyProgress);
         }

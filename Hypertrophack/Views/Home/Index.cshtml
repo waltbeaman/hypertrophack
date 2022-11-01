@@ -2,7 +2,17 @@
     ViewData["Title"] = "Home Page";
     Layout = "_HomeLayout";
 }
-<div class="row">
+<style>
+    .zoom {
+        transition: transform .2s;
+        margin: 0 auto;
+    }
+
+        .zoom:hover {
+            transform: scale(1.5); /* 150% zoom */
+        }
+</style>
+<div class="container justify-content-center" style="max-width: 30rem;">
     <div class="text-center flex-row justify-content-center">
             <img src="~/images/muscle-logo.png" class="m-4" height="150px" width="150px" alt="flexing arm" />
             <br />
@@ -11,18 +21,13 @@
     <div class="text-center flex-row justify-content-center w">
             <p>HypertropHack allows you to input your workouts to track your progress toward the optimal number of sets for muscle growth.</p>
             <div class="circles-wrapper">
-                <div class="circle">
+                <div class="circle zoom">
                     <a href="/CompletedExercises" class="home-links">Completed<br />Exercises</a>
                 </div>
-                <div class="circle">
+                <div class="circle zoom">
                     <a href="/WeeklyProgress" class="home-links">Check<br />Progress</a>
                 </div>
             </div>
         </div>
     
-</div>
-
-
-<div class="row">
-
 </div>
