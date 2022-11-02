@@ -1,4 +1,4 @@
-# Hypertrophack
+# HypertropHack
 
 A simple tool to input strength training data and track optimal hypertrophy for each muscle group.
 
