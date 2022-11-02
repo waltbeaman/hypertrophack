@@ -50,17 +50,16 @@ namespace Hypertrophack.Controllers
         {
             ViewBag.MuscleGroups = MuscleGroups;
 
-            _context.Add(completedExercise);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-            // Figure out why ViewBag is sending null value for muscle group
-            //if (ModelState.IsValid)
-            //{
-            //    _context.Add(completedExercise);
-            //    await _context.SaveChangesAsync();
-            //    return RedirectToAction(nameof(Index));
-            //}
-            //return View(completedExercise);
+            //_context.Add(completedExercise);
+            //await _context.SaveChangesAsync();
+            //return RedirectToAction(nameof(Index));
+            if (ModelState.IsValid)
+                {
+                    _context.Add(completedExercise);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+            return View(completedExercise);
         }
 
         // GET: CompletedExercises/Edit/5
