@@ -2,16 +2,7 @@
     ViewData["Title"] = "Home Page";
     Layout = "_HomeLayout";
 }
-<style>
-    .zoom {
-        transition: transform .2s;
-        margin: 0 auto;
-    }
 
-        .zoom:hover {
-            transform: scale(1.5); /* 150% zoom */
-        }
-</style>
 <div class="container justify-content-center" style="max-width: 30rem;">
     <div class="text-center flex-row justify-content-center">
             <img src="~/images/muscle-logo.png" class="m-4" height="150px" width="150px" alt="flexing arm" />
@@ -19,8 +10,12 @@
             <h1 class="home-title m-4">HypertropHack</h1>
     </div>
     <div class="text-center flex-row justify-content-center w">
-            <p>HypertropHack allows you to input your workouts to track your progress toward the optimal number of sets for muscle growth.</p>
+            <p>Input your workouts throughout the week to track your progress toward the optimal number of sets for muscle growth.</p>
+            <p>To get started, select add exercise.</p>
             <div class="circles-wrapper">
+                <div class="circle zoom">
+                    <a href="/CompletedExercises/Create" class="home-links">Add<br />Exercise</a>
+                </div>
                 <div class="circle zoom">
                     <a href="/CompletedExercises" class="home-links">Completed<br />Exercises</a>
                 </div>

@@ -55,7 +55,7 @@ namespace Hypertrophack.Controllers
             //return RedirectToAction(nameof(Index));
             if (ModelState.IsValid)
                 {
-                    _context.Add(completedExercise);
+                    _context.Add(completedExercise); 
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
