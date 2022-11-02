@@ -2,7 +2,7 @@
 
 A simple tool to input strength training data and track optimal hypertrophy for each muscle group.
 
-Based on the hypertrophy guide at Renaissance Peroiodizatoin (https://rpstrength.com/hypertrophy-training-guide-central-hub/).
+Based on the hypertrophy guide at Renaissance Peroiodization (https://rpstrength.com/hypertrophy-training-guide-central-hub/).
 
 ![Home Page](https://github.com/waltbeaman/Hypertrophack/blob/main/Screenshots/home_page.png)
 
