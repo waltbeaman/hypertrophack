@@ -1,6 +1,6 @@
 # HypertropHack
 
-A simple tool to input strength training data and track optimal hypertrophy for each muscle group.
+A simple tool to input strength training data and track optimal hypertrophy for each muscle group on a weekly basis.
 
 Based on the hypertrophy guide at Renaissance Peroiodization (https://rpstrength.com/hypertrophy-training-guide-central-hub/).
 
