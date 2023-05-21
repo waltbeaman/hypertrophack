@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xEKU8X9JmD+6JKRMCjFzVsCyuBiQQ5Hd17KCiY2OKYjGsTrCfaYFkn2EQqojCb/VcG2fc5H3obK4J0afbfUEyg==",
+  "dgSpecHash": "NVdpjAY5HvTFM1/a1ywRInO2Q52B4gvEa0YBseMm8lQLM48aYWrzDwG46XfyFben9G+tLoxOkVU5ul8B/rR9OA==",
   "success": true,
-  "projectFilePath": "E:\\Projects\\Hypertrophack\\Hypertrophack\\Hypertrophack.csproj",
+  "projectFilePath": "C:\\Users\\uualt\\source\\repos\\hypertrophack\\Hypertrophack\\Hypertrophack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uualt\\.nuget\\packages\\chartjs\\22.1.6\\chartjs.22.1.6.nupkg.sha512",
     "C:\\Users\\uualt\\.nuget\\packages\\cldrjs\\0.4.4\\cldrjs.0.4.4.nupkg.sha512",
