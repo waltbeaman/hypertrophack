@@ -15,7 +15,7 @@ html {
 
 body {
     margin-bottom: 60px;
-    /*background-image: linear-gradient(180deg, #b1bccc, #ffffff);*/
+/*    background-image: linear-gradient(180deg, #292b2c, #43494d);*/
 }
 
 @font-face {
@@ -71,4 +71,24 @@ body {
     .zoom:hover {
         transform: scale(1.5); /* 150% zoom */
     }
+
+.navbar-link {
+    box-shadow: inset 0 0 0 0 #292b2c;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+    .navbar-link:hover {
+        box-shadow: inset 150px 0 0 0 #292b2c;
+    }
+
+
+.countdown-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: bold;
+}
 
