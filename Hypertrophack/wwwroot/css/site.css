@@ -82,3 +82,13 @@ body {
         box-shadow: inset 150px 0 0 0 #292b2c;
     }
 
+
+.countdown-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: bold;
+}
+
